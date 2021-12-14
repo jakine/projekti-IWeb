@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">    
+<title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul{
+            list-style-type: none;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+
+        #category-list>li{
+            width: fit-content;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 8px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        #category-list>li>a{
+            text-decoration: none;
+            color: black;
+            font-size: 24px;
+        }
+
+        #category-list>li>img{
+            height: 22px;
+            width: 22px;
+            margin-right: 8px;
+        }
+
+        nav{
+            height: 8vh;
+            width: 100%;
+            background-color: aqua;
+            position: sticky;
+            top: 0;
+            display: block;
+        }
+        footer{
+            height: 16vh;
+            background-color: aqua;
+            width: 100%;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .empty-space{
+            height: 1500px;
+            width: 75%;
+            background-color: red;
+            right: 0;
+            display: inline-block;
+        }
+        
+
+        .categories-div{
+            height: 76vh;
+            width: 20%;
+            position: sticky;
+            top: 8vh;
+            text-align: center;
+            padding-top: 32px;
+        }
+
+                /* stroke */
+        .stroke ul li
+        {
+        position: relative;
+        }
+        .stroke ul li:after
+        {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: '.';
+        color: transparent;
+        background: #aaa;
+        height: 4px;
+        }
+        .stroke ul li:hover:after {
+        width: 100%;
+        transition: all .7s;
+        }
+
+        .stroke ul li:hover{
+            background-color: rgba(0, 0, 0, 0.13);
+        }
+
+        .stroke ul li:active{
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>nav</nav>
+
+        <div class="container">
+            <div class="categories-div stroke">
+                <ul id="category-list">
+                    <li><img src="../img/tools.png" alt="icon-img"><a href="#">Ushqim</a></li>
+                    <li><img src="../img/tools.png" alt="icon-img"><a href="#">Veshje</a></li>
+                    <li><img src="../img/tools.png" alt="icon-img"><a href="#">Teknologji</a></li>
+                    <li><img src="../img/tools.png" alt="icon-img"><a href="#">Aksesorë</a></li>
+                    <li><img src="../img/tools.png" alt="icon-img"><a href="#">Mjete Pune</a></li>
+                </ul>
+            </div>
+            
+        
+        <div class="empty-space"></div>
+        </div>
+<footer>h</footer>
+</body>
+</html>
