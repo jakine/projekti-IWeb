@@ -1,5 +1,95 @@
-nav{
+#nav{
+    height: 8vh;
+    width: 100%;
     display: flex;
-    background-color: cornflowerblue;
     justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    position: sticky;
+    top: 0;
+}
+
+#nav>h1{
+    font-size: 36px;
+    margin-left: 16px;
+}
+
+#search-box-div{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#search-box-div>#searchbox{
+    width: 95%;
+    padding: 8px;
+}
+
+#search-box-div>i{
+    font-size: 24px;
+    padding: 6px;
+    background-color: darkgrey;
+}
+
+#search-box-div>i:active{
+    background-color: aliceblue;
+    transition: all 0.25;
+}
+
+#search-box-div>i:hover{
+    cursor: pointer;
+}
+
+.nav-icons{
+    margin-right: 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.icon-div{
+    display: flex;
+    align-items: center;
+    padding: 0 8px 0 8px;
+    height: 100%;
+    user-select: none;
+}
+
+.icon-div:hover{
+    background-color: antiquewhite;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.icon-div:active{
+    background-color: aliceblue;
+}
+
+.icon-div img{
+    height: 32px;
+    width: 32px;
+}
+
+.icon-div div{
+    margin-left: 8px;
+}
+
+.icon-div p{
+    font-size: 18px;
+}
+
+.user-icon-div>img{
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+}
+
+.user-icon-div{
+    margin-right: 16px;
+}
+.user-icon-div>img:active{
+    transform: scale(1.2);
+    transition: all .1s;
 }

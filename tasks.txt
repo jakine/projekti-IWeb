@@ -5,7 +5,7 @@ nav bar
 
 kategorit
 *Gjetja e nen kategorive 
-*
+*Duhet te fshihet fajlli index.html ne vend te tij eshte index.php
 *
 
 kartat/produket 
