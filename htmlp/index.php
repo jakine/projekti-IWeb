@@ -13,7 +13,9 @@
     <body>
         <?php include "navbar.html" ?>
         
-        <?php include "categories.html" ?>
+        <?php include "content.html" ?>
+        
+        <?php include "footer.html" ?>
         
 		<script src="../js/main.js"></script>
     </body>

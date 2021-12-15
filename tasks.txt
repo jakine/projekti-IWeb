@@ -11,3 +11,5 @@ kategorit
 kartat/produket 
 *
 *
+
+*ngjyrat
