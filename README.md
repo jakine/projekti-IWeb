@@ -16,3 +16,8 @@
 -riemerimi fajllit categories.html ne content.html, ku do te behen merge kartat e produkteve dhe kategorite(linqet) ndryshe nga ideja fillestare qe te krijohen 
 dy fajlle html te ndryshme nje per kategorite dhe nje per kartat e produkteve  
 //Arber
+
+#
+-rregullimi i ngjyrave te header footer dhe butonave
+-rregullimi i pjeses se Kartave te produkteve me Grid
+//Arber

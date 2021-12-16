@@ -11,9 +11,9 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 8px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding: 12px 0;
+    user-select: none;
+    text-align: center;
 }
 
 #category-list>li>a{
@@ -52,7 +52,7 @@ margin: auto;
 width: 0%;
 content: '.';
 color: transparent;
-background: #aaa;
+background: var(--border-color);
 height: 4px;
 }
 .stroke ul li:hover:after {
@@ -61,21 +61,86 @@ transition: all .7s;
 }
 
 .stroke ul li:hover{
-    background-color: rgba(0, 0, 0, 0.13);
+    background-color: var(--hover-color);
+    transition: all .1s;
     cursor: pointer;
 }
 
 .stroke ul li:active{
-    background-color: white;
+    background-color: aliceblue;
 }
 
 /*stilizimi i pjeses se kartave*/
 .content-div{
     display: flex;
+    background-color: aliceblue;
 }
 
 .card-container-div{
-    background-color: aqua;
     width: 80%;
-    height: 150vh;
+    /*centrimi i kartave*/
+    display: flex;
+    justify-content: center;
+    /* border-left: 1px solid var(--border-color); */
+    box-shadow: -1px 2px 16px 0px rgba(0,0,0,0.3);
+}
+
+.card{
+    background-color: white;
+    /* height: 40vh;
+    width: 28vh; */
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px var(--border-color) solid;
+    border-radius: 6px;
+}
+
+.card .card-text-div{
+    width: 80%;
+    cursor: pointer;
+}
+.card>img{
+    width: 80%;
+    height: 124px;
+    object-fit: fill;
+    border-radius: 6px;
+    box-shadow: -1px 2px 16px 0px rgba(0,0,0,0.3);
+}
+
+.card>img:hover{
+    cursor: pointer;
+    transform: scale(1.04);
+    transition:  .5s;
+}
+
+.card button{
+    width: 80%;
+    padding: 8px 24px;
+    border-radius: 6px;
+    border: var(--border-color) 2px solid;
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+
+.card button:hover{
+    background-color: var(--primary-color);
+    transition: all .1s;
+}
+
+.card button:active{
+    background-color: aliceblue;
+}
+
+/*Card Grid System*/
+
+.centering-card-div{
+    width: 80%;
+    padding: 32px 0;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(28vh, 1fr));
+    grid-auto-rows: 40vh;
 }

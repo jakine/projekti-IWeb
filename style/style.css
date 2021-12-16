@@ -1,5 +1,8 @@
 :root{
-    --primary-color: #A9AABC;
+    --primary-color: #C6D1FF;
+    --hover-color: #9A9DE5;
+    --border-color: #253C78;
+    /*aliceblue*/
 }
 
 *{
@@ -9,6 +12,13 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body{
-    background-color: azure;
+
+#nav{
+    background-color: var(--primary-color) !important;
+    border: none !important;
+}
+
+footer{
+    background-color: var(--primary-color) !important;
+    border: none !important;
 }

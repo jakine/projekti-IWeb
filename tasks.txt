@@ -13,3 +13,6 @@ kartat/produket
 *
 
 *ngjyrat
+
+Rregullimi faqeve log-in dhe sign up
+Krijimi i faqes rethnesh.html
