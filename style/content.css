@@ -99,11 +99,11 @@ transition: all .7s;
 }
 
 .card .card-text-div{
-    width: 80%;
+    width: 75%;
     cursor: pointer;
 }
 .card>img{
-    width: 80%;
+    width: 75%;
     height: 124px;
     object-fit: fill;
     border-radius: 6px;
@@ -117,7 +117,7 @@ transition: all .7s;
 }
 
 .card button{
-    width: 80%;
+    width: 75%;
     padding: 8px 24px;
     border-radius: 6px;
     border: var(--border-color) 2px solid;

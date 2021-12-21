@@ -1,78 +1,73 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    
-}
 body{
-    background-color:darkslategray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to right, #c6d1ff, #bac4f9, #afb7f3, #a4aaec, #9a9de5);
 }
 
-a{
-    text-decoration: none;
-    color: grey; 
-    font-size: 20px;
-    margin-left: 10px; 
-
-}
-
-#home{
-    color: black;
-    font-weight: bold;
-}
-.container{
-    background-color: teal;
-    width: 500px;
-    height: 350px;
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 30px;
-}
-h1{
-    margin-bottom: 10px;
-    margin-right: 15%;
+    width: 564px;
+    height: 60vh;
+    color: var(--border-color);
 }
 
-input{
+.container a{
+    color: var(--border-color);
+}
+
+.container form{
+    display: flex;
+    flex-direction: column;
+    height: 24vh;
     width: 70%;
-    padding: 8px;
-    text-align: center;
-    border-radius: 10px;
+    justify-content: space-evenly;
+}
+
+.container input{
+    width: 100%;
+    outline: none;
     border: none;
+    padding: 8px;
+    margin: 8px 0;
 }
 
-#icons{
-    position: absolute;
-    margin-top: 350px;
+#submitBtn{
+    width: 100%;
+    border: none;
+    padding: 8px;
+    margin: 8px 0;
 }
 
-i{
+#submitBtn{
+    border: 1px solid var(--border-color);
+    background-color: var(--primary-color);
+    font-size: 1.8vh;
+}
+
+#submitBtn:hover{
+    background-color: var(--hover-color);
+    transition: all .5s;
+}
+
+#submitBtn:active{
     background-color: aliceblue;
-    padding: 10px;
-    border-radius: 50%;
-    margin-right: 30px;
 }
 
-#submitBtn {
-    background-color: blue;
-    color: white;
+.container input:focus{
+    box-shadow: -1px 2px 24px 2px #253C78;
+    transition: all 0.35s;
+    
 }
 
-#fb {
-    background-color: aqua;
+#submitBtn{
+    cursor: pointer;
 }
 
-#google{
-    background-color: red;
-}
-
-#twiter {
-    background-color: aquamarine;
+.container a:active{
+    color: var(--primary-color)
 }
