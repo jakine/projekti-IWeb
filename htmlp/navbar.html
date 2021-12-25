@@ -9,16 +9,24 @@
     <!--lidhja per ikonat-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../style/nav.css">
+    <style>
+        #home-button a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
 </head>
 <body>
     <nav id="nav">
-        <h1 id="home-button"><a href="http://localhost:4000/projekti-IWeb/htmlp/index.php"></a></h1>
+        <h1 id="home-button"><a href="http://localhost:4000/projekti-IWeb/htmlp/index.php">koala-shop</a></h1>
         <div id="search-box-div">
             <input type="search" id="searchbox" placeholder="Search..."><i class="fas fa-search"></i>
         </div>
         <div class="nav-icons">
             <div class="user-icon-div">
+                <a href="./login.html">
                 <img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-user-interface-kiranshastry-lineal-kiranshastry-1.png"/>
+                </a>
             </div>
             <div class="shporta-blerjes-div icon-div">
                 <div><img src="https://img.icons8.com/external-becris-lineal-becris/64/000000/external-shopping-cart-future-shopping-becris-lineal-becris.png"/></div>
@@ -31,6 +39,5 @@
             </div>
         </div>
     </nav>
-    <script src="../js/main.js"></script>
 </body>
 </html>

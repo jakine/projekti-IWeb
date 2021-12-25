@@ -47,6 +47,12 @@ footer{
     display: flex;
     flex-direction: column;
 }
+
+#register-btn a{
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: all .1s;
+}
 #register-btn{
     font-size: 2vh;
     font-weight: bold;
@@ -56,17 +62,20 @@ footer{
     border-radius: 6px;
     border: var(--border-color) 2px solid;
     background-color: var(--border-color);
-    color: var(--primary-color);
     cursor: pointer;
     align-self: center;
-
     position: relative;
     animation-name: left-to-right;
     animation-duration: 2s;
+    transition-duration: all .1s;
 }
 
 #register-btn:hover{
     background-color: var(--hover-color);
+    color: black;
+    transition: all .1s;
+}
+#register-btn:hover a{
     color: black;
     transition: all .1s;
 }

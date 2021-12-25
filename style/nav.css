@@ -1,6 +1,7 @@
 #nav{
     height: 8vh;
-    width: 100%;
+    max-width: 100%;
+    overflow-x: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,7 +13,7 @@
 }
 
 #nav>h1{
-    font-size: 4vh;
+    font-size: 2.5vh;
     margin-left: 16px;
     cursor: pointer;
 }
@@ -85,10 +86,10 @@
 }
 
 .icon-div p{
-    font-size: 18px;
+    font-size: 1.8vh;
 }
 
-.user-icon-div>img{
+.user-icon-div>a>img{
     height: 32px;
     width: 32px;
     cursor: pointer;
@@ -100,4 +101,14 @@
 .user-icon-div>img:active{
     transform: scale(1.2);
     transition: all .1s;
+}
+
+@media (max-width: 400px){
+    #search-box-div{
+        display: none;
+    }
+
+    .icon-div{
+        font-size: 8px !important;
+    }
 }

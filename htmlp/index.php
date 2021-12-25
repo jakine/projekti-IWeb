@@ -16,7 +16,7 @@
         <?php include "content.html" ?>
         
         <?php include "footer.html" ?>
-        
-		<script src="../js/main.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="../js/admin.js"></script>
     </body>
 </html>

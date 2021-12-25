@@ -12,7 +12,11 @@ body{
     justify-content: center;
     align-items: center;
     width: 564px;
+    height: 60vh;
     color: var(--border-color);
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(to right, #5671b4, #7d80d6, rgb(102, 179, 246)) 1;
 }
 
 .container form{
@@ -56,6 +60,12 @@ body{
 
 .container a{
     color: var(--border-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.container a:hover{
+    text-decoration: underline;
 }
 
 .container input:focus{
@@ -69,6 +79,11 @@ body{
 }
 
 .gender{
-    display: inline-block;
     width: 50%;
+}
+
+@media (max-width: 400px){
+    .container{
+        width: 90%;
+    }
 }

@@ -7,39 +7,93 @@
     <title>Document</title>
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/stylesingup.css">
+    <style>
+        .alert-danger-message{
+            font-size: 12px;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
+    
         <div class="container">
             <h1>Regjistrohu</h1>
             <form action="">
                 <div class="username-div">
                     <label>UserName</label><br>
-                    <input type="text" placeholder="UserName"> 
+                    <input type="text" placeholder="UserName" id="username"> 
                 </div>
                 <div class="email-div">
                     <label>Email</label><br>
-                    <input type="email" placeholder="Enter Email" > 
+                    <input type="email" placeholder="Enter Email" id="email"> 
                 </div>
                 <div class="password-div">
                     <label>Fjalëkalimi</label><br>
-                    <input type="text" placeholder="Enter Password"> 
+                    <input type="text" placeholder="Enter Password" id="password"> 
                 </div>
-                <div class="birth-year">
+                <div class="birth-year" required>
                     <label>Viti i Lindjes</label><br>
-                    <input type="date" name="birth-year" id="">
+                    <input type="date" name="birthday" id="birthday" min="1900-01-01" max="2003-12-31" required>
                 </div>
                 <div class="gender">
                     <label for="gender">Gjinia:</label>
-                    <select name="gender">
+                    <select name="gender" required>
+                        <option selected></option>
                         <option>Femër</option>
                         <option>Mashkull</option>
                     </select>
                 </div>
-                <button type="button" id="submitBtn">Kyqu</button>
+                <button type="button" id="submitBtn" onclick="signUpValidate()">Kyqu</button>
             </form>
             <p>Jeni te regjistruar <a href="./login.html">Kyquni këtu</a></p>
         </div>
-    </div>
+    
+    <script>
+        function signUpValidate(){
+            var email = document.querySelector('#email');
+            var password = document.querySelector('#password');
+            var username = document.querySelector('#username');
+            var birthday = document.querySelector('#birthday');
+                //email
+            var emailRegex = /\w+@\w+\.[a-z]{2,3}|[a-z0-9]+@\w+\-\w+\.[a-z]{2,3}/;
+            if(email.value == "" || password.value == "" || username.value == "" || birthday.value == ""){
+                alert("Plotesoni te gjitha Fushat")
+            }else{
+                if(emailRegex.test(email.value)){
+                    var passwordRegex = /^\w+[a-z]+\d+$/;
+                    if(passwordRegex.test(password.value)){
+                            //username
+                        var usernameRegex = /^\w{8,15}$/;
+                        if(usernameRegex.test(username.value)){
+                            email.value = "";
+                            password.value = "";
+                            location.href = 'http://localhost:4000/projekti-IWeb/htmlp/index.php';
+                        }else{
+                            showAlert('Username duhet te kete 8-15 karaktere', 'username-div');
+                        }
+                    }else{
+                        showAlert("Password duhet te perfundoje me 1 ose me shume numra", "password-div")
+                    }   
+                }else{
+                    showAlert("Email nuk eshte Valid", "email-div")
+                }
+            }
+            
+        }
+        function showAlert(message, className){
+            const p = document.createElement('p');
+            p.classList.add('alert-danger-message');
+            p.appendChild(document.createTextNode(message));
+
+            const inputDiv = document.querySelector(`.${className}`);
+            if(inputDiv.contains(document.querySelector('.alert-danger-message'))){
+                inputDiv.removeChild(document.querySelector('.alert-danger-message'))
+            }
+            const inputField = document.querySelector(`.${className}`).children[2];
+            inputField.after(p)
+        }
+
+    </script>
 </body>
 </html>
