@@ -12,7 +12,8 @@ body{
     justify-content: center;
     align-items: center;
     width: 564px;
-    height: 60vh;
+    height: 70vh;
+    padding: 128px 0;
     color: var(--border-color);
     border-width: 4px;
     border-style: solid;
@@ -40,9 +41,6 @@ body{
     border: none;
     padding: 8px;
     margin: 8px 0;
-}
-
-#submitBtn{
     border: 1px solid var(--border-color);
     background-color: var(--primary-color);
     font-size: 1.8vh;
@@ -85,5 +83,6 @@ body{
 @media (max-width: 400px){
     .container{
         width: 90%;
+        height: 80vh;
     }
 }

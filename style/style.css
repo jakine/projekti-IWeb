@@ -22,3 +22,8 @@ footer{
     background-color: var(--primary-color) !important;
     border: none !important;
 }
+
+a:active{
+    background-color: transparent;
+    user-select: none;
+}

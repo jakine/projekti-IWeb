@@ -13,7 +13,7 @@
     <body>
         <?php include "navbar.html" ?>
         
-        <?php include "content.html" ?>
+        <?php include "content.php" ?>
         
         <?php include "footer.html" ?>
         <script src="../js/main.js"></script>

@@ -18,7 +18,7 @@
 </head>
 <body>
     <nav id="nav">
-        <h1 id="home-button"><a href="http://localhost:4000/projekti-IWeb/htmlp/index.php">koala-shop</a></h1>
+        <h1 id="home-button"><a href="http://localhost:4000/projekti-Web/htmlp/index.php">koala-shop</a></h1>
         <div id="search-box-div">
             <input type="search" id="searchbox" placeholder="Search..."><i class="fas fa-search"></i>
         </div>
@@ -38,6 +38,39 @@
                 <div><p>Lista Deshirave</p></div>
             </div>
         </div>
+        <div class="burger-icon">
+            <i class="fas fa-bars"></i>
+        </div>
     </nav>
+    <main>
+        <div class="main-nav-icons">
+            <div class="shporta-blerjes-div icon-div">
+                <div><img src="https://img.icons8.com/external-becris-lineal-becris/64/000000/external-shopping-cart-future-shopping-becris-lineal-becris.png"/></div>
+                <div><p>Shporta Blerjes</p></div>
+            </div>
+            
+            <div class="lista-deshirave-div icon-div">
+                <div><img src="https://img.icons8.com/ios/50/000000/like.png" /></div>
+                <div><p>Lista Deshirave</p></div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        var links = document.querySelector('.main-nav-icons');
+        var burgerBtn = document.querySelector('.burger-icon');
+       
+        burgerBtn.addEventListener('click', () => {
+            if(links.style.display === "none"){
+                links.style.display = "flex";
+                document.body.style.overflowY = "hidden";
+            }else{
+                links.style.display = "none";
+                document.body.style.overflowY = "scroll";
+            }
+            
+        });
+
+    </script>
 </body>
 </html>

@@ -23,7 +23,7 @@
    
     <div class="container">
         <h1>Kyqu</h1>
-        <form action="">
+        <form action="" autocomplete="off">
             <div class="email-div">
                 <label>Email</label><br>
                 <input type="email" placeholder="Enter Email" id="email"> 
@@ -57,7 +57,7 @@
                 }else{
                     email.value = "";
                     password.value = "";
-                    location.href = 'http://localhost:4000/projekti-IWeb/htmlp/index.php';
+                    location.href = 'http://localhost:4000/projekti-Web/htmlp/index.php';
                 }
             }else{
                 showAlert("Email nuk eshte Valid", "email-div")

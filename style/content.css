@@ -14,7 +14,7 @@
 }
 
 .slide-div img{
-    width: 100%;
+    min-width: 100%;
 }
 
 #prev-btn{
@@ -41,10 +41,10 @@
     padding: 8px;
 }
 
-#next-btn:hover , #prev-btn:hover {
+#next-btn:hover, #prev-btn:hover {
     background-color: rgba(0,0,0,0.3);
 }
-/*prefundimi:stilizimi i slider*/
+/*perfundimi:stilizimi i slider*/
 
 
 
@@ -64,12 +64,14 @@ ul{
     padding: 12px 0;
     user-select: none;
     text-align: center;
+    user-select: none;
 }
 
 #category-list>li>a{
     text-decoration: none;
     color: black;
     font-size: 24px;
+    user-select: none;
 }
 
 #category-list>li>img{
@@ -144,7 +146,7 @@ transition: all .7s;
     padding: 8px 0;
     min-width: 24vh;
     max-width: 24vh;
-    min-height: 32vh;
+    min-height: 36vh;
     max-height: 36vh;
     display: flex;
     flex-direction: column;
@@ -166,18 +168,20 @@ transition: all .7s;
 
 .card .card-text-div{
     width: 75%;
+    height: 48px;
     cursor: pointer;
+    margin: 8px;
 }
 .card>img{
     width: 75%;
     /* min-height: 32%;
     max-height: 40%; */
-    height: 124px;
-    object-fit: fill;
+    height: 100px;
     border-radius: 6px;
     box-shadow: -1px 2px 16px 0px rgba(0,0,0,0.3);
     transition:  .35s;
     user-select: none;
+    margin: 8px;
 }
 
 .card>img:hover{
@@ -199,6 +203,7 @@ transition: all .7s;
     background-color: var(--hover-color);
     cursor: pointer;
     user-select: none;
+    margin: 8px;
 }
 
 .card button:hover{
@@ -221,41 +226,79 @@ transition: all .7s;
     grid-auto-rows: 40vh;
 }
 
-
-/*tablet*/
-@media screen and (max-width: 1024px){
-    .categories-div{
-        display: none;
-    }
-
-    .card-container-div{
-        width: 100%;
-        overflow-x: none;
-    }
-
-    .centering-card-div{
-        width: 100%;
-        grid-gap: 2vh;
-        grid-auto-rows: 32vh;
-    }
+.content-div #search-box-div{
+    display: none;
 }
 
-/*iphoneX*/
+
+/*tablet*/
+
+
+/*iphoneSE*/
 @media screen and (max-width: 375px){
+
     .categories-div{
-        display: none;
+        position: relative;
+        height: 10vh;
+        width: 100%;
+        text-align: center;
+        top: 0;
+        padding: 0;
+        border-bottom: var(--primary-color) 1px solid;
+        overflow-x: scroll;
+        overflow-y: hidden;
     }
+
+    ul{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    #category-list>li{
+        padding: 6px 32px;
+        border: var(--border-color) solid 1px;
+        border-radius: 4px;
+        width: auto;
+        margin-right: 8px;
+        white-space: nowrap;
+    }
+
+    .content-div{
+        flex-direction: column;
+        justify-content: space-between;
+        height: auto;
+        padding: 0 8px;
+    }    
+
+    
 
     .card-container-div{
         width: 100%;
         overflow-x: none;
+        box-shadow: none;
     }
 
     .centering-card-div{
         width: 100%;
-        grid-gap: 2vh;
+        grid-gap: 8vh 2vh;
         grid-auto-rows: 32vh;
+        padding-bottom: 64px;
     }
+
+    .content-div #search-box-div{
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        width: 90%;
+        margin: 16px;
+    }
+
+    .card-text-div p{
+        font-size: 14px;
+    }
+
 }
 
 
