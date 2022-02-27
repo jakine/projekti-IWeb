@@ -1,18 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style/style.css">    
-    <link rel="stylesheet" href="../style/content.css">
-<title>Document</title>
+<?php
+require_once 'C:\xampp\htdocs\projekti-IWeb\htmlp\controllers\ProductController.php';
+?>
+<html>
+    <head>
+        <title>KoalaShop Food</title>
+		<link rel="stylesheet" href="../style/style.css">
 
-</head>
-<body>
+        <!--Linqet per FONT-STYLE-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../style/content.css">
+    </head>
+    <body>
+        <?php include "navbar.html" ?>
+        
+        <body>
     <div class="content-div">
 
         <div id="search-box-div">
@@ -47,17 +50,18 @@
            <div class="centering-card-div">
                 
                 <?php 
-                require_once 'C:\xampp\htdocs\projekti-IWeb\htmlp\controllers\ProductController.php';
                 $m = new ProductController();
                 $produktet = $m->readData();
                 foreach($produktet as $produkti){
-                        echo '<div class="card">';
-                        echo '<div class="card-text-div"><h2>'.$produkti['titulli'].'</h2>';
-                        echo '<p>'.$produkti['pershkrimi'].'</p></div>';
-                        echo '<img src="../img/'.$produkti['img'].'" alt="'.$produkti['img'].'">';
-                        echo '<h2>$'.$produkti['cmimi'].'</h2>';
-                        echo '<button>Buy Now <i class="fas fa-shopping-cart"></i>.</button>';
-                        echo '</div>';
+                        if($produkti['kategoria'] == 'food'){
+                            echo '<div class="card">';
+                            echo '<div class="card-text-div"><h2>'.$produkti['titulli'].'</h2>';
+                            echo '<p>'.$produkti['pershkrimi'].'</p></div>';
+                            echo '<img src="../img/'.$produkti['img'].'" alt="'.$produkti['img'].'">';
+                            echo '<h2>$'.$produkti['cmimi'].'</h2>';
+                            echo '<button>Buy Now <i class="fas fa-shopping-cart"></i>.</button>';
+                            echo '</div>';
+                        }
                     }
                 ?>
                 
@@ -67,4 +71,9 @@
     </div>
     
 </body>
+        
+        <?php include "footer.html" ?>
+        <script src="../js/main.js"></script>
+        <script src="../js/admin.js"></script>
+    </body>
 </html>

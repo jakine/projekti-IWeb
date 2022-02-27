@@ -170,5 +170,9 @@ main .main-nav-icons{
     #home-button{
         order: 1;
     }
+
+    #logout{
+        display: none;
+    }
 }
 

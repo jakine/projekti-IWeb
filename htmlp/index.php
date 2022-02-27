@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php
+require_once 'C:\xampp\htdocs\projekti-IWeb\htmlp\controllers\ProductController.php';
+
+
+if($_SESSION['email'] == '' && $_SESSION['password'] == ''){
+    header('Location: login.php');
+}
+?>
 <html>
     <head>
 
@@ -12,7 +19,6 @@
     </head>
     <body>
         <?php include "navbar.html" ?>
-        
         <?php include "content.php" ?>
         
         <?php include "footer.html" ?>
